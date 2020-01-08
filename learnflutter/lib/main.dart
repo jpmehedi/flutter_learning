@@ -15,6 +15,8 @@ void main() {
         ),
         body: Center(
           child:Image(
+            //network image dose not working i can not findout this 
+            //image:NetworkImage('https://www.w3schools.com/w3css/img_lights.jpg'),
             image:AssetImage('images/diamond.png'),
           )
       ),

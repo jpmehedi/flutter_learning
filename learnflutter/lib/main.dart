@@ -14,19 +14,54 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("Home"),),
         body:SafeArea(
-            child: Container(
-            height: 100.00,
-            width: 100.00,
-            color: Colors.brown[200],
-            //margin: EdgeInsets.all(50),
-            margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
-            //margin: EdgeInsets.only(left:50),
-           //margin: EdgeInsets.symmetric(vertical: 50,horizontal: 100),
+          // Under all of those property to same use the row widget 
+            child: Column(
+              
+              //mainAxisAlignment: MainAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.end,
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-           //padding: EdgeInsets.all(25),
-            padding: EdgeInsets.fromLTRB(10, 50, 10, 8),
-            child: Text("Hello Flutter"),
-          ),
+              //mainAxisSize: MainAxisSize.min,
+              //mainAxisSize: MainAxisSize.max,
+
+              //verticalDirection: VerticalDirection.down,
+              //verticalDirection: VerticalDirection.up,
+
+              //crossAxisAlignment:CrossAxisAlignment.end ,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                height: 100.00,
+                //for corssAxisAlignment width consider
+               // width: 100.00,
+               // if corssAxisalignment.end so use width double.infinity
+               // if corssAxisalignment.stretch so not use width but ultimately both are same result
+               //width: double.infinity,
+                color: Colors.brown[200],
+                child: Text("Container 1"),
+              ),
+              SizedBox(
+                //Height use for column 
+                //Width use for row
+                height: 20.00,
+
+              ),
+               Container(
+                height: 100.00,
+                //width: 100.00,
+                color: Colors.brown[600],
+                child: Text("Container 2"),
+              ), 
+              SizedBox(height: 20.00,),          
+              Container(
+                height: 100.00,
+                //width: 100.00,
+                color: Colors.brown[900],
+                child: Text("Container 3"),
+              ),
+              ],
+            ),
         )
       ),
     );

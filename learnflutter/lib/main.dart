@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -31,68 +32,59 @@ class MyApp extends StatelessWidget {
                 'Flutter Develper'.toUpperCase(),
                 style: TextStyle(
                   fontFamily: 'SourceSnasPro',
-                  fontSize: 25.00,
+                  fontSize: 20.00,
                   color: Colors.teal.shade100,
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.00),
-                margin:
-                    EdgeInsets.symmetric(horizontal: 20.00, vertical: 20.00),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.00,
-                    ),
-                    Text(
-                      '+880-179080825',
-                      style: TextStyle(
-                        fontFamily: 'SourceSnasPro',
-                        color: Colors.teal[200],
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.00,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 10.00,
+                width: 150.00,
+                child: Divider(
+                  color: Colors.teal[100],
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.00),
-                margin: EdgeInsets.symmetric(horizontal: 20.00,vertical: 20.00),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+              Card(
+                margin:
+                    EdgeInsets.symmetric(vertical: 10.00, horizontal: 25.00),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+880- 1790180825',
+                    style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.00,
+                        color: Colors.teal[200]),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.00, horizontal: 25.0),
+                child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10.00,
-                    ),
-                    Text(
+                    title: Text(
                       'mehedihasan@gmail.com',
                       style: TextStyle(
                         fontFamily: 'SourceSansPro',
                         fontWeight: FontWeight.bold,
                         fontSize: 20.00,
                         color: Colors.teal[300],
-
                       ),
-                    ),
-                  ],
-                ),
-              )
+                    )),
+              ),
             ],
           ),
         ),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

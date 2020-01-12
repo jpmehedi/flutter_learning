@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 //the main function of all flutter code
 void main() {
@@ -31,7 +32,7 @@ class _DiceePageState extends State<DiceePage> {
               onPressed: () {
                 //use  setSate for data update 
               setState(() {
-               leftDiceNumber = 1; 
+               leftDiceNumber = Random().nextInt(6)+1; 
               });
               },
               child: Image.asset('images/dice$leftDiceNumber.png'),

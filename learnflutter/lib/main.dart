@@ -15,24 +15,31 @@ void main() {
   );
 }
 
-class DiceePage extends StatelessWidget {
+class DiceePage extends StatefulWidget {
+  _DiceePageState createState() => _DiceePageState();
+}
+
+class _DiceePageState extends State<DiceePage> {
+  var leftDiceNumber = 5;
   @override
   Widget build(BuildContext context) {
-    var leftDice = 5;
     return Center(
       child: Row(
         children: <Widget>[
           Expanded(
             child: FlatButton(
               onPressed: () {
-                //print("button presed");
-            },
-              child: Image.asset('images/dice$leftDice.png'),
+                //use  setSate for data update 
+              setState(() {
+               leftDiceNumber = 1; 
+              });
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
             child: FlatButton(
-              onPressed: (){},
+              onPressed: () {},
               child: Image.asset('images/dice2.png'),
             ),
           ),

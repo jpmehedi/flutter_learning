@@ -5,7 +5,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.red,
         appBar: AppBar(
           title: Text('Dicee'),
         ),
@@ -18,21 +18,23 @@ void main() {
 class DiceePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          child: Image(
-            //width: 200.00,
-            image: AssetImage('images/dice1.png'),
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice1.png'),
+            ),
           ),
-        ),
-        Expanded(
-          child: Image(
-            //width: 200.00,
-            image: AssetImage('images/dice2.png'),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice2.png'),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

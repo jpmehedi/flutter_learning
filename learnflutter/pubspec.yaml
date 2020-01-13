@@ -23,6 +23,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  english_words: ^3.1.5
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +51,14 @@ flutter:
     - images/dice4.png
     - images/dice5.png
     - images/dice6.png
+    - assets/note1.wav
+    - assets/note2.wav
+    - assets/note3.wav
+    - assets/note4.wav
+    - assets/note5.wav
+    - assets/note6.wav
+    - assets/note7.wav
+
   fonts:
     - family: Pacifico
       fonts:
